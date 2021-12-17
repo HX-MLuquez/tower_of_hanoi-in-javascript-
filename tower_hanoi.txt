@@ -1,0 +1,11 @@
+The algorithm of the tower of hanoi in javascript 
+Explained its flow, its logical operation. 
+The calculation to know the minimum movements and graphics 
+that clarify its recursion. Also a version of this function 
+that lists the movements.
+
+El algoritmo de la torre de hanoi en javascript 
+Explicado su flujo, su funcionamiento lógico. 
+El cálculo para saber los movimientos mínimos y gráficos 
+que aclaran su recursividad. Además una versión de dicha 
+función que nos enumera los movimientos.
