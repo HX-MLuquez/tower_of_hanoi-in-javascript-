@@ -133,20 +133,16 @@ const App = () => {
             moviendo estos discos de acuerdo con las reglas inmutables de Brahma
             desde ese momento.
           </p>
+          
           <p>
             Por lo tanto, el acertijo también se conoce como el rompecabezas de
             la Torre de Brahma. Según la leyenda, cuando se complete el último
             movimiento del rompecabezas, el mundo se terminará.
           </p>
           <h4>
-            Explicado su flujo, su funcionamiento lógico en:
+            Code en:
             https://github.com/HX-MLuquez/tower_of_hanoi-in-javascript-
           </h4>
-          <p>
-            El cálculo para saber los movimientos mínimos y gráficos que aclaran
-            su recursividad. Además una versión de dicha función que nos enumera
-            los movimientos y nos brinda la solución más rápida paso a paso.
-          </p>
         </div>
       </div>
     </div>
