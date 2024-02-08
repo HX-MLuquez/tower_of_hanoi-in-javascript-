@@ -94,7 +94,8 @@ const App = () => {
     } else {
       // console.log("first move --> ",lines[firstMove].length !== 0 &&lines[firstMove][0].props.children);
       // console.log("second move --> ",lines[move].length !== 0 &&lines[move][0].props.children);
-      if (
+      if (firstMove === move) {
+      } else if (
         lines[move].length === 0 ||
         lines[move][0].props.children.length >
           lines[firstMove][0].props.children.length
@@ -185,18 +186,22 @@ const App = () => {
           <h3>SOLUCIÓN</h3>
           <h4>La cantidad de pasos son: {steps}</h4>
           <div className="steps">
-            {Object.keys(objSolution).length !== 0 ? Object.keys(objSolution)?.map((s, i) => {
-              console.log("in map");
-              return (
-                <div key={i} className="solution">
-                  <p>Paso {s}</p>
-                  <h4>Mover {objSolution[s]}</h4>
-                </div>
-              );
-            }):<div key={"i"} className="solution">
-            <p></p>
-            <h4></h4>
-          </div>}
+            {Object.keys(objSolution).length !== 0 ? (
+              Object.keys(objSolution)?.map((s, i) => {
+                console.log("in map");
+                return (
+                  <div key={i} className="solution">
+                    <p>Paso {s}</p>
+                    <h4>Mover {objSolution[s]}</h4>
+                  </div>
+                );
+              })
+            ) : (
+              <div key={"i"} className="solution">
+                <p></p>
+                <h4></h4>
+              </div>
+            )}
           </div>
         </div>
         <div className="box ythin"></div>

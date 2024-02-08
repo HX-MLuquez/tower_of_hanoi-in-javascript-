@@ -75,7 +75,7 @@ label {
   display: flex;
   flex-direction: column;
   position: fixed;
-  margin-left: 22px;
+  margin-left: 32px;
   color: black;
   align-items: center;
   background-color: #b9b9ffcd;
@@ -117,4 +117,26 @@ label {
   border-radius: 3px;
   max-height: 200px; /* Define la altura máxima deseada */
   overflow-y: auto; /* Activa el desplazamiento vertical cuando el contenido excede la altura máxima */
+}
+
+
+@media only screen and (max-width: 600px) {
+  
+  .box {
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+  .header{
+    margin-left: 20px;
+    font-size: 0.8em;
+  }
+  input {
+    font-size: 1em;
+    display: flex;
+  }
+  .in{
+    margin-left: 80px;
+  }
+  .footera{
+display: none;
+  }
 }
