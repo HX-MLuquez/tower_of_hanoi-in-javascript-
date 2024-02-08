@@ -92,10 +92,12 @@ const App = () => {
       setFirstMove(move);
       setClickOnOff(true);
     } else {
+      // console.log("first move --> ",lines[firstMove].length !== 0 &&lines[firstMove][0].props.children);
+      // console.log("second move --> ",lines[move].length !== 0 &&lines[move][0].props.children);
       if (
         lines[move].length === 0 ||
-        lines[move][lines[move].length - 1].props.children.length >
-          lines[firstMove][lines[firstMove].length - 1].props.children.length
+        lines[move][0].props.children.length >
+          lines[firstMove][0].props.children.length
       ) {
         var newLines = [...lines[firstMove]];
         var piece = newLines.shift();
