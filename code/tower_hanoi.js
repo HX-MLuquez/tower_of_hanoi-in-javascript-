@@ -64,7 +64,7 @@ function tower_hanoi_listed (n, origen, auxiliar, destino) {
 };
 
 tower_hanoi_listed(9, "A", "B", "C");
-
+tower_hanoi_listed(3, "A", "B", "C");
 // The flow of the program is:
 
 // primero considerar que el orden de la torre es:

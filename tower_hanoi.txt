@@ -5,7 +5,19 @@ that clarify its recursion. Also a version of this function
 that lists the movements.
 
 El algoritmo de la torre de hanoi en javascript 
-Explicado su flujo, su funcionamiento lógico. 
+Explicado su flujo, su funcionamiento lógico -> https://github.com/HX-MLuquez/tower_of_hanoi-in-javascript-
+
 El cálculo para saber los movimientos mínimos y gráficos 
 que aclaran su recursividad. Además una versión de dicha 
 función que nos enumera los movimientos.
+
+
+               ORIGEN       
+                  ▄                ███               ███
+                 ▄▄▄               ███               ███
+                ▄▄▄▄▄              ███               ███
+                  A                 B                 C     
+            █████████████     █████████████     █████████████         
+                ORIGEN 
+
+Cantidad inicial de aros en A =   3
