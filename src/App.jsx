@@ -182,10 +182,10 @@ const App = () => {
           <h4>C</h4>
         </div>
         <div className="box wide">
-          <h3>SOLUCIÓN - PASO A PASO</h3>
-          <h4>La cantidad de pasos a realizar son: {steps}</h4>
-          <div>
-            {Object.keys(objSolution)?.map((s, i) => {
+          <h3>SOLUCIÓN</h3>
+          <h4>La cantidad de pasos son: {steps}</h4>
+          <div className="steps">
+            {Object.keys(objSolution).length !== 0 ? Object.keys(objSolution)?.map((s, i) => {
               console.log("in map");
               return (
                 <div key={i} className="solution">
@@ -193,7 +193,10 @@ const App = () => {
                   <h4>Mover {objSolution[s]}</h4>
                 </div>
               );
-            })}
+            }):<div key={"i"} className="solution">
+            <p></p>
+            <h4></h4>
+          </div>}
           </div>
         </div>
         <div className="box ythin"></div>

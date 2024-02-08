@@ -39,8 +39,9 @@
   width: calc(10% - 0px); 
 }
 
-.wide {
+.box .wide {
   width: calc(33.333% - 10px); 
+  background-color: #f5f2f2;
 }
 
 .footer {
@@ -74,12 +75,12 @@ label {
   display: flex;
   flex-direction: column;
   position: fixed;
-  margin-left: 20px;
+  margin-left: 22px;
   color: black;
   align-items: center;
-  background-color: #b9b9ff;
+  background-color: #b9b9ffcd;
   border-radius: 4px;
-  padding: 6px;
+  padding: 6px 10px;
 }
 
 .footera {
@@ -97,8 +98,8 @@ label {
 
 .solution{
   display: flex;
-  background-color: #e0e0e0;
-  padding: 0.1em 6em;
+  background-color: #ffffff;
+  padding: 0.1em 3em;
 }
 
 .center {
@@ -110,4 +111,10 @@ label {
   border: solid;
   border-color: #646cff;
   cursor: pointer;
+}
+
+.steps {
+  border-radius: 3px;
+  max-height: 200px; /* Define la altura máxima deseada */
+  overflow-y: auto; /* Activa el desplazamiento vertical cuando el contenido excede la altura máxima */
 }
