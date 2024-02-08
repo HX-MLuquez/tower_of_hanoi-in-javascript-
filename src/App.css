@@ -28,6 +28,7 @@
   align-items: center;
 }
 
+
 .thin {
   width: calc(4% - 0px); 
 }
@@ -54,9 +55,9 @@
 }
 
 input {
-  width: 40%; 
+  width: 60%; 
   margin-bottom: 12px;
-  padding: 0.2em 0.5em;
+  padding: 0.2em 0.8em;
   font-size: 16px;
   border-radius: 8px;
 }
@@ -87,7 +88,7 @@ label {
   display: flex;
   justify-content: center; 
   align-items: center; 
-  position: fixed;
+  /* position: fixed; */
   bottom: 0; 
   left: 0;
   right: 0;
@@ -98,4 +99,15 @@ label {
   display: flex;
   background-color: #e0e0e0;
   padding: 0.1em 6em;
+}
+
+.center {
+  flex-grow: 1; /* Hacer que los elementos se expandan para ocupar todo el espacio disponible */
+  display: flex;
+  justify-content: flex-end
+}
+.center:hover {
+  border: solid;
+  border-color: #646cff;
+  cursor: pointer;
 }
