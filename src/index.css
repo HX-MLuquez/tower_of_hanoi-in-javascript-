@@ -28,9 +28,22 @@ a:hover {
 
 
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   line-height: 0;
-  color: rgb(3, 16, 51);
+  color: rgb(43, 70, 146);
+  font-weight: bold; /* Para hacer el texto más ancho */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Efecto resplandor */
+  transition: transform 0.8s ease-in-out; /* Transición suave para el hover */
+}
+
+h1:hover {
+  transform: scale(1.2); /* Escalado en el hover para el efecto de balanceo */
+}
+
+h4{
+  padding: none;
+  margin: 1px 1px;
+  font-size: 0.9em;
 }
 
 button {
@@ -60,4 +73,24 @@ p{
   margin: 0px 4px;
 }
 
+@media only screen and (max-width: 600px) {
+  h1{
+    font-size: 2em;
+  }
+  :root{
+    display: flex;
+    width: 100%;
+  }
+  body{
+    width: 100%;
+  }
+  button{
+    padding: 4px 6px;
+    margin-left: 4px;
+  }
+  label{
+    font-size: 0.8em;
+    font-weight: 500;
+  }
+}
 

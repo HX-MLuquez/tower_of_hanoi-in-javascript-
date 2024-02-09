@@ -138,25 +138,22 @@ const App = () => {
     <div className="app">
       <div className="header">
         <h1>TORRE DE HANOI en JS</h1>
-        <h3>Algoritmo de la torre de hanoi en javascript </h3>
       </div>
-      <div className="footer"></div>
-      <div className="container">
-        <div className="box zthin">
-          <div className="in">
-            <div>
-              <label htmlFor="numAros">Cantidad inicial de aros en A = </label>
-              <input
-                type="number"
-                id="numAros"
-                onChange={handleInputChange}
-                value={numAros}
-              />
-            </div>
-            <button onClick={initCodeTowerHanoi}>Aplicar Solución</button>
-            <button onClick={reset}>Reiniciar</button>
-          </div>
+      <div className="in">
+        <div>
+          <label htmlFor="numAros">Cantidad inicial de aros en A = </label>
+          <input
+            type="number"
+            id="numAros"
+            onChange={handleInputChange}
+            value={numAros}
+          />
         </div>
+        <button onClick={initCodeTowerHanoi}>Aplicar Solución</button>
+        <button onClick={reset}>Reiniciar</button>
+      </div>
+      <div className="container">
+        <div className="box zthin"></div>
         <div className="box center" onClick={movePiece} name="origin">
           <h4>ORIGEN</h4>
           <div className="torre">
@@ -189,7 +186,7 @@ const App = () => {
           <h4>C</h4>
         </div>
         <div className="box wide">
-          <h4>LLevas {count} pasos</h4>
+          <h4 style={{"color": "rgb(43, 70, 146)"}}>Has realizado « {count} » pasos</h4>
           <h3>SOLUCIÓN</h3>
           <h4>La cantidad de pasos son: {steps}</h4>
           <div className="steps">
@@ -229,7 +226,7 @@ const App = () => {
             la Torre de Brahma. Según la leyenda, cuando se complete el último
             movimiento del rompecabezas, el mundo se terminará.
           </p>
-          <h4>
+          <h4 style={{"font-weight": "800", "color": "#3f246f"}}>
             Code en: https://github.com/HX-MLuquez/tower_of_hanoi-in-javascript-
           </h4>
         </div>
