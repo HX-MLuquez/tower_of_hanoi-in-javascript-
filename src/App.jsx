@@ -77,9 +77,9 @@ const App = () => {
     setSteps(0);
     setObjSolution({});
     setFinish(false);
-    setCount(0)
-    setFirstMove("")
-    setClickOnOff(false)
+    setCount(0);
+    setFirstMove("");
+    setClickOnOff(false);
     return;
   }
 
@@ -117,7 +117,9 @@ const App = () => {
         if (move === "destiny" && lines[move].length + 1 === numAros) {
           setFinish(true);
           alert(
-            `Felicidades!!!! Lo has conseguido en ${count} pasos!!! \n Si quieres volver a jugar selecciona 'Reiniciar'`
+            `Felicidades!!!! Lo has conseguido en ${
+              count + 1
+            } pasos!!! \n Si quieres volver a jugar selecciona 'Reiniciar'`
           );
           return;
         }
