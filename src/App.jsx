@@ -3,6 +3,7 @@ import "./App.css";
 import code_tower_hanoi from "./utils/code_tower_hanoi";
 
 const App = () => {
+  const [count, setCount] = useState(0);
   const [numAros, setNumAros] = useState(0);
 
   const [steps, setSteps] = useState(0);
@@ -76,13 +77,16 @@ const App = () => {
     setSteps(0);
     setObjSolution({});
     setFinish(false);
+    setCount(0)
+    setFirstMove("")
+    setClickOnOff(false)
     return;
   }
 
   function movePiece(e) {
     if (finish)
       return alert(
-        "Felicidades!!!! Lo has conseguido!!! \n Si quieres volver a jugar selecciona 'Reiniciar'"
+        `Felicidades!!!! Lo has conseguido en ${count} pasos!!! \n Si quieres volver a jugar selecciona 'Reiniciar'`
       );
     const move = e.currentTarget.getAttribute("name");
 
@@ -109,11 +113,11 @@ const App = () => {
             [move]: [piece, ...l[move]],
           };
         });
-
+        setCount((num) => num + 1);
         if (move === "destiny" && lines[move].length + 1 === numAros) {
           setFinish(true);
           alert(
-            "Felicidades!!!! Lo has conseguido!!! \n Si quieres volver a jugar selecciona 'Reiniciar'"
+            `Felicidades!!!! Lo has conseguido en ${count} pasos!!! \n Si quieres volver a jugar selecciona 'Reiniciar'`
           );
           return;
         }
@@ -183,6 +187,7 @@ const App = () => {
           <h4>C</h4>
         </div>
         <div className="box wide">
+          <h4>LLevas {count} pasos</h4>
           <h3>SOLUCIÓN</h3>
           <h4>La cantidad de pasos son: {steps}</h4>
           <div className="steps">
