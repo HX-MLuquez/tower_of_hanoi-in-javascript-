@@ -37,60 +37,12 @@ h1 {
 }
 
 h1:hover {
-  transform: scale(1.2); /* Escalado en el hover para el efecto de balanceo */
+  transform: scale(0.6); /* Escalado en el hover para el efecto de balanceo */
 }
 
 h4{
   padding: none;
   margin: 1px 1px;
   font-size: 0.9em;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid rgb(28, 28, 101);
-  padding: 0.4em 1em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #d6f7f3;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  margin-bottom: 12px;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-.row{
-  margin-right: 250px;
-}
-
-p{
-  margin: 0px 4px;
-}
-
-@media only screen and (max-width: 600px) {
-  h1{
-    font-size: 2em;
-  }
-  :root{
-    display: flex;
-    width: 100%;
-  }
-  body{
-    width: 100%;
-  }
-  button{
-    padding: 4px 6px;
-    margin-left: 4px;
-  }
-  label{
-    font-size: 0.8em;
-    font-weight: 500;
-  }
 }
 

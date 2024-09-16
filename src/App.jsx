@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import code_tower_hanoi from "./utils/code_tower_hanoi";
 
@@ -134,101 +135,164 @@ const App = () => {
       setClickOnOff(false);
     }
   }
+
   return (
-    <div className="app">
-      <div className="header">
-        <h1>TORRE DE HANOI en JS</h1>
-      </div>
-      <div className="in">
-        <div>
-          <label htmlFor="numAros">Cantidad inicial de aros en A = </label>
-          <input
-            type="number"
-            id="numAros"
-            onChange={handleInputChange}
-            value={numAros}
-          />
-        </div>
-        <button onClick={initCodeTowerHanoi}>Aplicar Solución</button>
-        <button onClick={reset}>Reiniciar</button>
-      </div>
-      <div className="container">
-        <div className="box zthin"></div>
-        <div className="box center" onClick={movePiece} name="origin">
-          <h4>ORIGEN</h4>
-          <div className="torre">
-            {lines.origin &&
-              lines.origin.map((l, i) => {
-                return l;
-              })}
+    <div className="container-fluid">
+      <div className="dflex">
+        {/* Main Content */}
+        <div className="flex-grow-1">
+          {/* Header */}
+          <div className="container row d-none d-md-block p-2">
+            <div className="col">
+              <div className="h-100 p-4 text-white bg-dark rounded-1">
+
+                  <h1>Torre de HANOI</h1>
+
+
+                <p className="p-2">
+                  Juego creado con JS. Puedes encontrar las soluciones con su recorrido más corto 
+                </p>
+              </div>
+            </div>
           </div>
-          <div key={"100"}>█████</div>
-          <h4>A</h4>
-        </div>
-        <div className="box center" onClick={movePiece} name="aux">
-          <h4>AUXILIAR</h4>
-          {lines.aux &&
-            lines.aux.map((l, i) => {
-              return <div key={i}>{l}</div>;
-            })}
 
-          <div key={"101"}>█████</div>
-          <h4>B</h4>
-        </div>
-        <div className="box center" onClick={movePiece} name="destiny">
-          <h4>DESTINO</h4>
-          {lines.destiny &&
-            lines.destiny.map((l, i) => {
-              return <div key={i}>{l}</div>;
-            })}
+          <div className="container mt-1">
+            <div className="d-flex flex-column align-items-center">
+              <div className="d-flex align-items-center">
+                <label htmlFor="numAros" className="form-label me-3">
+                  AROS
+                </label>
+                <input
+                  type="number"
+                  id="numAros"
+                  className="form-control w-25 me-3"
+                  onChange={handleInputChange}
+                  value={numAros}
+                  style={{ padding: "8px" }}
+                />
+                <div className="box wide">
+                  <h4 style={{ color: "rgb(43, 70, 146)" }}>
+                    Realizaste « {count} » pasos
+                  </h4>
+                </div>
+              </div>
 
-          <div key={"102"}>█████</div>
-          <h4>C</h4>
+              <div
+                className="btn-group mb-1"
+                role="group"
+                aria-label="Control Buttons"
+              >
+                <button
+                  className="btn btn-primary me-5"
+                  onClick={initCodeTowerHanoi}
+                >
+                  Aplicar Solución
+                </button>
+                <button className="btn btn-secondary" onClick={reset}>
+                  Reiniciar
+                </button>
+              </div>
+            </div>
+
+            <div className="#">
+              <div className="d-flex justify-content-center flex-wrap">
+                
+                <div
+                  className="box center me-3 fixed-size"
+                  onClick={movePiece}
+                  name="origin"
+                >
+                  <h4>ORIGEN</h4>
+                  <div className="torre">
+                    {lines.origin && lines.origin.map((l, i) => l)}
+                  </div>
+                  <div key={"100"}>█████</div>
+                  <h4>A</h4>
+                </div>
+                <div
+                  className="box center me-3 fixed-size"
+                  onClick={movePiece}
+                  name="aux"
+                >
+                  <h4>AUXILIAR</h4>
+                  {lines.aux && lines.aux.map((l, i) => <div key={i}>{l}</div>)}
+                  <div key={"101"}>█████</div>
+                  <h4>B</h4>
+                </div>
+                <div
+                  className="box center me-3 fixed-size"
+                  onClick={movePiece}
+                  name="destiny"
+                >
+                  <h4>DESTINO</h4>
+                  {lines.destiny &&
+                    lines.destiny.map((l, i) => <div key={i}>{l}</div>)}
+                  <div key={"102"}>█████</div>
+                  <h4>C</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="container mt-5">
+            <div
+              className="col text-center bg-secondary p-2 text-white"
+              style={{ color: "gray" }}
+            >
+              <p>
+              En el antiguo templo de Kashi Vishwanath en la India, se encuentra una sala venerable con tres 
+              postes desgastados por el paso del tiempo, rodeados por 100 discos dorados de gran belleza. 
+              Según la leyenda, los sacerdotes de Brahma, guiados por una antigua profecía, han estado 
+              moviendo estos discos siguiendo las reglas sagradas de Brahma desde tiempos inmemoriales.
+              </p>
+              <p>
+              Este enigma, conocido también como el rompecabezas de la Torre de Brahma, es más que un 
+              simple desafío. La leyenda afirma que cuando se complete el último movimiento de este 
+              rompecabezas, el mundo llegará a su fin.
+              </p>
+              <a
+                href="https://github.com/HX-MLuquez/tower_of_hanoi-in-javascript-"
+                target="_blank"
+                className="text-white"
+              >
+                <h4 style={{ fontWeight: "800", color: "#3f246f" }}>
+                  Code in GitHub
+                </h4>
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="box wide">
-          <h4 style={{"color": "rgb(43, 70, 146)"}}>Has realizado « {count} » pasos</h4>
-          <h3>SOLUCIÓN</h3>
+
+        {/* Sidebar Solution */}
+        <div
+          className="top-0 end-0 p-3"
+          style={{
+            width: "300px",
+            height: "100vh",
+            overflowY: "auto",
+            backgroundColor: "#f8f9fa",
+            borderLeft: "2px solid #dee2e6",
+            boxShadow: "-2px 0 5px rgba(0, 0, 0, 0.1)",
+          }}
+        >
+          <h3 className="#">SOLUCIÓN</h3>
           <h4>La cantidad de pasos son: {steps}</h4>
           <div className="steps">
             {Object.keys(objSolution).length !== 0 ? (
-              Object.keys(objSolution)?.map((s, i) => {
-                console.log("in map");
-                return (
-                  <div key={i} className="solution">
-                    <p>Paso {s}</p>
-                    <h4>Mover {objSolution[s]}</h4>
-                  </div>
-                );
-              })
+              Object.keys(objSolution).map((s, i) => (
+                <div key={i} className="solution mb-3">
+                  <p>Paso {s}</p>
+                  <h4>Mover {objSolution[s]}</h4>
+                </div>
+              ))
             ) : (
-              <div key={"i"} className="solution">
+              <div className="solution mb-3">
                 <p></p>
                 <h4></h4>
               </div>
             )}
           </div>
-        </div>
-        <div className="box ythin"></div>
-      </div>
-      <div className="footera">
-        <div className="row">
-          <p>
-            Se cuenta una historia sobre un templo en la India en Kashi
-            Vishwanath que contiene una gran sala con tres postes gastados por
-            el tiempo, rodeada de 100 discos dorados. Los sacerdotes de Brahma,
-            actuando bajo el mandato de una antigua profecía, han estado
-            moviendo estos discos de acuerdo con las reglas inmutables de Brahma
-            desde ese momento.
-          </p>
-
-          <p>
-            Por lo tanto, el acertijo también se conoce como el rompecabezas de
-            la Torre de Brahma. Según la leyenda, cuando se complete el último
-            movimiento del rompecabezas, el mundo se terminará.
-          </p>
-          <h4 style={{"font-weight": "800", "color": "#3f246f"}}>
-            Code en: https://github.com/HX-MLuquez/tower_of_hanoi-in-javascript-
-          </h4>
         </div>
       </div>
     </div>

@@ -1,157 +1,214 @@
-.app {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* Paleta de colores */
+:root {
+  --primary-color: #005f73; /* Azul oscuro */
+  --secondary-color: #94d2bd; /* Verde agua */
+  --tertiary-color: #ee9b00; /* Amarillo dorado */
+  --background-color: #e9d8a6; /* Beige claro */
+  --card-background: #ffffff; /* Blanco */
+  --text-color: #333; /* Gris oscuro */
+  --border-color: #c0c0c0; /* Gris claro */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
-.header {
-  background-color: #2c0303;
-  padding: 3% 1%;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* General */
+body {
+  background-color: var(--background-color);
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1px;
-  height: 100%;
+/* Encabezado */
+h2 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 20px 0;
 }
 
+/* Botones */
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #003d40; /* Un tono más oscuro para hover */
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #68b0ab; /* Un tono más oscuro para hover */
+  transform: scale(1.05);
+}
+.dflex{
+  display: flex;
+}
+@media only screen and (max-width: 780px) {
+  .dflex{
+    display: flex;
+    flex-wrap: wrap
+  }
+}
+
+/* Contenido */
 .box {
-  width: calc(80% - 10px);
-  padding: 10px;
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  margin-bottom: 20px;
+}
+
+/* Aros */
+.aro {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  font-size: 24px;
+  color: var(--tertiary-color);
+  text-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Columnas */
+.fixed-size {
+  width: auto; /* Ajusta el ancho fijo según sea necesario */
+  height: auto; /* Ajusta la altura automáticamente según la cantidad de aros */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.thin {
-  width: calc(4% - 0px);
-}
-.ythin {
-  width: calc(4% - 0px);
-}
-.zthin {
-  width: calc(10% - 0px);
+.fixed-size:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px var(--shadow-color);
 }
 
-.box .wide {
-  width: calc(33.333% - 10px);
-  background-color: #f5f2f2;
+/* Contenedor de la torre */
+.torre {
+  overflow: hidden;
+  margin-bottom: 15px;
 }
 
-.footer {
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Barra lateral */
+.top-0.end-0 {
+  border-left: 1px solid var(--border-color);
+  box-shadow: 2px 0 6px var(--shadow-color);
+  background-color: var(--card-background);
   padding: 20px;
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+/* Solución */
+.steps {
+  margin-top: 20px;
 }
 
-input {
-  width: 60%;
-  margin-bottom: 12px;
-  padding: 0.2em 0.8em;
-  font-size: 16px;
+.solution {
+  background-color: #f9f9f9;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px var(--shadow-color);
 }
-label {
-  margin-left: 8px;
+
+.solution p {
+  margin: 0;
+  font-size: 1rem;
 }
+
+.solution h4 {
+  margin: 5px 0 0;
+  font-size: 1.1rem;
+}
+
+/* Tipografía */
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
 
 .aro {
   display: flex;
   justify-content: center;
+  margin: 2px;
+  font-size: 24px;
+  color: #f0ad4e; /* Amarillo claro */
 }
-.in {
-  font-size: 70%;
-  display: flex;
-  flex-direction: column-reverse;
-  position: fixed;
-  margin-left: 2%;
-  margin-top: 2%;
-  color: black;
-  align-items: center;
-  background-color: #b9b9ffcd;
-  border-radius: 4px;
-  padding: 6px 10px;
-  width: 10%;
+h1{
+  color: rgb(248, 251, 225) !important;
 }
 
-.footera {
+
+
+footer {
+  background-color: #f8f9fa;
   padding: 20px;
+  border-radius: 5px;
+}
+
+
+.fixed-size {
+  width: 150px; /* Ajusta el ancho fijo según sea necesario */
+  height: 300px; /* Ajusta la altura fija según la cantidad de aros */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  /* position: fixed; */
-  bottom: 0;
-  left: 0;
-  right: 0;
-  font-size: 0.8em;
+  justify-content: center;
 }
 
-.solution {
+.box {
   display: flex;
-  background-color: #ffffff;
-  padding: 0.1em 3em;
-}
-
-.center {
-  flex-grow: 1; /* Hacer que los elementos se expandan para ocupar todo el espacio disponible */
-  display: flex;
+  flex-direction: column;
   justify-content: flex-end;
-}
-.center:hover {
-  border: solid;
-  border-color: #646cff;
-  cursor: pointer;
+  align-items: center;
+  
 }
 
-.steps {
-  border-radius: 3px;
-  max-height: 200px; /* Define la altura máxima deseada */
-  overflow-y: auto; /* Activa el desplazamiento vertical cuando el contenido excede la altura máxima */
+/* Asegura que el contenido no se expanda más allá de la caja */
+.torre {
+  overflow: hidden;
 }
 
-@media only screen and (max-width: 600px) {
-  .box {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    
-  }
-  .header {
-    
-    font-size: 0.8em;
-  }
-  input {
-    font-size: 1em;
-    display: flex;
-  }
-  .in {
-    margin: 8px 14px;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    width: 90%;
-    position: relative;
-  }
-  .footera {
-    display: none;
-  }
-  .wide{
-    position: fixed; 
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 100%;
-  }
-  .app{
-    height: auto;
-    width: 100%;
-  }
+h3{
+  color: var(--tertiary-color) !important
 }
+
