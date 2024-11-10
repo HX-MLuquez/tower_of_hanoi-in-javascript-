@@ -61,12 +61,7 @@ h2 {
 .dflex{
   display: flex;
 }
-@media only screen and (max-width: 780px) {
-  .dflex{
-    display: flex;
-    flex-wrap: wrap
-  }
-}
+
 
 /* Contenido */
 .box {
@@ -212,3 +207,27 @@ h3{
   color: var(--tertiary-color) !important
 }
 
+
+
+@media only screen and (max-width: 768px) {
+  .dflex{
+    display: flex;
+    flex-wrap: wrap
+  }
+  #box_res{
+    background-color: #ee9b0007;
+  
+   }
+   .boxi{
+    width: 28%;
+    margin: 0%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+   }
+   #my_text{
+    display: none;
+   }
+   #solution{
+    margin-left: 24px;
+   }
+}

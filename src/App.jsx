@@ -195,10 +195,10 @@ const App = () => {
             </div>
 
             <div className="#">
-              <div className="d-flex justify-content-center flex-wrap">
+              <div className="d-flex justify-content-center flex-wrap" id="box_res">
                 
                 <div
-                  className="box center me-3 fixed-size"
+                  className="box center me-3 fixed-size boxi"
                   onClick={movePiece}
                   name="origin"
                 >
@@ -210,7 +210,7 @@ const App = () => {
                   <h4>A</h4>
                 </div>
                 <div
-                  className="box center me-3 fixed-size"
+                  className="box center me-3 fixed-size boxi"
                   onClick={movePiece}
                   name="aux"
                 >
@@ -220,7 +220,7 @@ const App = () => {
                   <h4>B</h4>
                 </div>
                 <div
-                  className="box center me-3 fixed-size"
+                  className="box center me-3 fixed-size boxi"
                   onClick={movePiece}
                   name="destiny"
                 >
@@ -237,7 +237,7 @@ const App = () => {
           {/* Footer */}
           <div className="container mt-5">
             <div
-              className="col text-center bg-secondary p-2 text-white"
+              className="col text-center bg-secondary p-2 text-white" id="my_text"
               style={{ color: "gray" }}
             >
               <p>
@@ -267,6 +267,7 @@ const App = () => {
         {/* Sidebar Solution */}
         <div
           className="top-0 end-0 p-3"
+          id="solution"
           style={{
             width: "300px",
             height: "100vh",
